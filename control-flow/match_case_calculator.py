@@ -5,20 +5,21 @@ def main():
     num2 = float(input("Enter the second number: "))
     operation = input("Choose the operation (+, -, *, /): ")
     # calculations with statements
-    if operation == "+":
-        result = num1 + num2
-    elif operation == "-":
-        result = num1 - num2
-    elif operation == "*":
-        result = num1 * num2
-    elif operation == "/":
-        if num2 != 0:
-            result = num1 / num2
-        else:
-            result = "undefined (Cannot divide by zero.)"
-    else:
-        result = "invalid operation"
-            
+    match operation:
+        case "+":
+            result = num1 + num2
+        case "-":
+            result = num1 - num2
+        case "*":
+            result = num1 * num2
+        case "/":
+            if num2 != 0:
+                result = num1 / num2
+            else:
+                result = "undefined (Cannot divide by zero.)"
+        case _:
+            result = "invalid operation"
+                        
     #output
     if isinstance(result, (int, float)):
         print(f"The result is {result}.")
@@ -27,4 +28,4 @@ def main():
 if __name__ == "__main__":
     main()
            
-        
+    
