@@ -32,7 +32,7 @@ def main():
     
     
     # Print the customized reminder
-    
+    print("\nReminder:")
     print(reminder)
 
 if __name__ == "__main__":
