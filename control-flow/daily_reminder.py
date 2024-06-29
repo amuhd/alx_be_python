@@ -32,8 +32,8 @@ def main():
     
     
     # Print the customized reminder
-    print("\nReminder:")
-    print(reminder)
+    
+    print(f"Reminder: {reminder}")
 
 if __name__ == "__main__":
     main()
