@@ -39,6 +39,7 @@ def view_list():
 
 # Main function to run the shopping list manager
 def main():
+    print(f"Shopping List Manager")
     while True:
         choice = display_menu()
         
@@ -57,3 +58,4 @@ def main():
 # Entry point of the script
 if __name__ == "__main__":
     main()
+
