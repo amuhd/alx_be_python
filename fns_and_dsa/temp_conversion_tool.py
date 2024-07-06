@@ -28,8 +28,13 @@ def main():
         else:
             raise ValueError("Invalid temperature unit. Please enter 'C' or 'F'.")
 
-    except ValueError as e:
-        print(f"Error: {e}. Please enter a numeric temperature value.")
+    except ValueError:
+        print("Invalid Temperature. Please enter a numeric temperature value.")
+        
+    choice = input("Do you want to convert another temperature? (yes/no): ").lower()
+    if choice != 'yes':
+        print("Goodbye!")
+
 
 # Entry point of the script
 if __name__ == "__main__":
