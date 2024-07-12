@@ -7,7 +7,7 @@ def safe_divide(numerator, denominator):
         result = num / denom
         return f"The result is: {result}"
     except ValueError:
-        return "Error: Non-numeric input detected. Please provide numeric values."
+        return "Error: Please enter numeric values only."
 
 # Example usage (for testing purposes):
 # print(safe_divide(10, 2))  # Should print "The result is: 5.0"
