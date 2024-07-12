@@ -28,7 +28,8 @@ def main():
                 if operation == "deposit":
                     account.deposit(amount)
                 elif operation == "withdraw":
-                    account.withdraw(amount)
+                    if not account.withdraw(amount):
+                        return
                 account.display_balance()
             else:
                 print("Please specify an amount for the operation.")
