@@ -7,14 +7,24 @@ def main():
         print("Example: python main-0.py 100 deposit 50")
         return
 
-    initial_balance = float(sys.argv[1])
+    try:
+        initial_balance = float(sys.argv[1])
+    except ValueError:
+        print("Initial balance must be a number.")
+        return
+    
     account = BankAccount(initial_balance)
 
     if len(sys.argv) >= 3:
         operation = sys.argv[2].lower()
         if operation in ["deposit", "withdraw"]:
             if len(sys.argv) >= 4:
-                amount = float(sys.argv[3])
+                try:
+                    amount = float(sys.argv[3])
+                except ValueError:
+                    print("Amount must be a number.")
+                    return
+                
                 if operation == "deposit":
                     account.deposit(amount)
                 elif operation == "withdraw":
