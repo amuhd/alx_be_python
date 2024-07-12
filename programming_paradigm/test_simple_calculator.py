@@ -16,14 +16,14 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.subtraction(0, 0), 0)
 
     def test_multiplication(self):
-        self.assertEqual(self.calc.multiplication(3, 5), 15)
-        self.assertEqual(self.calc.multiplication(-1, 1), -1)
-        self.assertEqual(self.calc.multiplication(0, 100), 0)
+        self.assertEqual(self.calc.multiply(3, 5), 15)
+        self.assertEqual(self.calc.multiply(-1, 1), -1)
+        self.assertEqual(self.calc.multiply(0, 100), 0)
 
     def test_division(self):
-        self.assertEqual(self.calc.division(10, 2), 5)
-        self.assertEqual(self.calc.division(-10, 2), -5)
-        self.assertEqual(self.calc.division(0, 1), 0)
+        self.assertEqual(self.calc.divide(10, 2), 5)
+        self.assertEqual(self.calc.divide(-10, 2), -5)
+        self.assertEqual(self.calc.divide(0, 1), 0)
         self.assertEqual(self.calc.division(10, 0), "Error: Division by zero is not allowed.")
         
 if __name__ == '__main__':
