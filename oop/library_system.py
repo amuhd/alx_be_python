@@ -18,7 +18,7 @@ class Book:
         return f"Book: {self.title} by {self.author}"
 
 
-class EBook(Book):
+class EBook:
     def __init__(self, title, author, file_size):
         """
         Initializes an EBook instance with the given title, author, and file size.
@@ -39,7 +39,7 @@ class EBook(Book):
         return f"EBook: {super().__str__()}, {self.file_size:}: 500KB" 
 
 
-class PrintBook(Book):
+class PrintBook:
     def __init__(self, title, author, page_count):
         """
         Initializes a PrintBook instance with the given title, author, and page count.
