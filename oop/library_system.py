@@ -28,7 +28,7 @@ class EBook(Book):
         :param file_size: The size of the ebook file in MB.
         """
         super().__init__(title, author)
-        self.file_size = "File Size"
+        self.file_size = file_size
 
     def __str__(self):
         """
@@ -36,7 +36,7 @@ class EBook(Book):
         
         :return: A string representing the ebook's title, author, and file size.
         """
-        return f"EBook: {super().__str__()}, {self.file_size:}: 500KB" 
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB" 
 
 
 class PrintBook(Book):
@@ -49,7 +49,7 @@ class PrintBook(Book):
         :param page_count: The number of pages in the print book.
         """
         super().__init__(title, author)
-        self.page_count = "Page Count"
+        self.page_count = page_count
 
     def __str__(self):
         """
@@ -57,7 +57,7 @@ class PrintBook(Book):
         
         :return: A string representing the print book's title, author, and page count.
         """
-        return f"PrintBook: {super().__str__()}, {self.page_count:}: 234 "
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 class Library:
